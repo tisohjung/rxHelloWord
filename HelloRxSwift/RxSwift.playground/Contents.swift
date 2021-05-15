@@ -26,16 +26,37 @@ import RxSwift
 //
 //subscription4.dispose()
 
+//let disposeBag = DisposeBag()
+//
+//let ob = Observable.of("A", "B", "C").subscribe({
+//    print($0)
+//}).disposed(by: disposeBag)
+//
+//
+//Observable<String>.create { observer in
+//    observer.onNext("A")
+//    observer.onCompleted()
+//    observer.onNext("?")
+//    return Disposables.create()
+//}.subscribe(onNext: { print($0) }, onError: { print($0) }, onCompleted: { print("complete") }, onDisposed: { print("disposed") }).disposed(by: disposeBag)
+
+
 let disposeBag = DisposeBag()
 
-let ob = Observable.of("A", "B", "C").subscribe({
-    print($0)
-}).disposed(by: disposeBag)
+let subject = PublishSubject<String>()
+
+subject.onNext("Issue 1")
+
+subject.subscribe { event in
+    print(event)
+}
+
+subject.onNext("Issue 2")
+subject.onNext("Issue 3")
+
+subject.dispose()
+subject.onCompleted() // can't be called after dispose
+
+subject.onNext("Issue 4") // can't be called after dispose or complete
 
 
-Observable<String>.create { observer in
-    observer.onNext("A")
-    observer.onCompleted()
-    observer.onNext("?")
-    return Disposables.create()
-}.subscribe(onNext: { print($0) }, onError: { print($0) }, onCompleted: { print("complete") }, onDisposed: { print("disposed") }).disposed(by: disposeBag)
