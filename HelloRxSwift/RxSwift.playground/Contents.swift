@@ -41,22 +41,32 @@ import RxSwift
 //}.subscribe(onNext: { print($0) }, onError: { print($0) }, onCompleted: { print("complete") }, onDisposed: { print("disposed") }).disposed(by: disposeBag)
 
 
+//let disposeBag = DisposeBag()
+//
+//let subject = PublishSubject<String>()
+//
+//subject.onNext("Issue 1")
+//
+//subject.subscribe { event in
+//    print(event)
+//}
+//
+//subject.onNext("Issue 2")
+//subject.onNext("Issue 3")
+//
+//subject.dispose()
+//subject.onCompleted() // can't be called after dispose
+//
+//subject.onNext("Issue 4") // can't be called after dispose or complete
+
+
 let disposeBag = DisposeBag()
 
-let subject = PublishSubject<String>()
+let subject = BehaviorSubject(value: "Initial Value") // Prints out last value of the subject
+//subject.onNext("Issue 0")
+
+subject.subscribe({ event in
+    print(event)
+})
 
 subject.onNext("Issue 1")
-
-subject.subscribe { event in
-    print(event)
-}
-
-subject.onNext("Issue 2")
-subject.onNext("Issue 3")
-
-subject.dispose()
-subject.onCompleted() // can't be called after dispose
-
-subject.onNext("Issue 4") // can't be called after dispose or complete
-
-
