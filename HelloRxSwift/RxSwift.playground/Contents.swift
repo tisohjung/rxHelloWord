@@ -1,8 +1,17 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 /// MARK: 7 BehaviorRelay
-
+let disposeBag = DisposeBag()
+let relay = BehaviorRelay(value: ["Initial Value"])
+relay.asObservable().subscribe({ print($0) })
+//relay.value = "Hello World" // value is get-only property
+//relay.accept(relay.value + ["Item 1"])
+var value = relay.value
+value.append("Item2")
+value.append("Item3")
+relay.accept(value)
 
 /// MARK: 6 Variable
 //let disposeBag = DisposeBag()
