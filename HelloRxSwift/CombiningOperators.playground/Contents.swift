@@ -27,3 +27,22 @@ func runConcat() {
 }
 
 // runConcat()
+
+func runMerge() {
+    let left = PublishSubject<Int>()
+    let right = PublishSubject<Int>()
+
+    let source = Observable.of(left.asObservable(), right.asObservable())
+    let observable = source.merge()
+    observable.subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+
+    left.onNext(1)
+    left.onNext(2)
+    right.onNext(4)
+    right.onNext(5)
+    left.onNext(3)
+}
+
+// runMerge()
