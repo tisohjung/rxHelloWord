@@ -44,7 +44,8 @@
 		5BE190327A66F888E5500DBA /* Pods-HelloRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-HelloRxSwift/Pods-HelloRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		5CD1DA49FE68468BD1CDEDB2 /* Pods-HelloRxSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-HelloRxSwiftTests/Pods-HelloRxSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		845DC555492B3DBCF42830F4 /* Pods-HelloRxSwift-HelloRxSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwift-HelloRxSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-HelloRxSwift-HelloRxSwiftUITests/Pods-HelloRxSwift-HelloRxSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9F21E2EE26579074007D02ED /* Functions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Functions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9F134ADC265E980200D4E875 /* TransFormingOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransFormingOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9F21E2EE26579074007D02ED /* Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9FD9B7FE2649CBC500B85388 /* HelloRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD9B8012649CBC500B85388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD9B8032649CBC500B85388 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,7 +134,8 @@
 		9FD9B8002649CBC500B85388 /* HelloRxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				9F21E2EE26579074007D02ED /* Functions.playground */,
+				9F134ADC265E980200D4E875 /* TransFormingOperators.playground */,
+				9F21E2EE26579074007D02ED /* Operators.playground */,
 				9FD9B8342649CD2D00B85388 /* RxSwift.playground */,
 				9FD9B8012649CBC500B85388 /* AppDelegate.swift */,
 				9FD9B8032649CBC500B85388 /* SceneDelegate.swift */,
