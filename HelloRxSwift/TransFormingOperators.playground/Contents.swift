@@ -1,6 +1,6 @@
 import PlaygroundSupport
-import RxSwift
 import RxCocoa
+import RxSwift
 
 let disposeBag = DisposeBag()
 
@@ -12,7 +12,7 @@ func runToArray() {
         }).disposed(by: disposeBag)
 }
 
-//runToArray()
+// runToArray()
 
 func runMap() {
     Observable.of(1, 2, 3, 4, 5)
@@ -23,7 +23,7 @@ func runMap() {
         }).disposed(by: disposeBag)
 }
 
-//runMap()
+// runMap()
 
 func runFlatMap() {
     struct Student {
@@ -38,7 +38,7 @@ func runFlatMap() {
     student.asObservable()
         .flatMap({ $0.score.asObservable() })
         .subscribe(onNext: {
-            print($0)
+            print($0)
         }).disposed(by: disposeBag)
 
     student.onNext(john)
@@ -50,6 +50,28 @@ func runFlatMap() {
     john.score.accept(44)
 }
 
-runFlatMap()
+// runFlatMap()
 
+func runFlatMapLatest() {
+    struct Student {
+        var score: BehaviorRelay<Int>
+    }
 
+    let john = Student(score: BehaviorRelay(value: 95))
+    let mary = Student(score: BehaviorRelay(value: 85))
+
+    let student = PublishSubject<Student>()
+
+    student.asObservable()
+        .flatMapLatest({ $0.score.asObservable() })
+        .subscribe(onNext: {
+            print($0)
+        }).disposed(by: disposeBag)
+
+    student.onNext(john)
+    john.score.accept(100)
+    student.onNext(mary)
+    john.score.accept(45)
+}
+
+runFlatMapLatest()
