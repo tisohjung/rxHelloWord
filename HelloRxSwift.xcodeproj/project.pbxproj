@@ -62,6 +62,7 @@
 		9FD9B8262649CBC700B85388 /* HelloRxSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloRxSwiftUITests.swift; sourceTree = "<group>"; };
 		9FD9B8282649CBC700B85388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FD9B8342649CD2D00B85388 /* RxSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwift.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9FFC0296265EC0D000EA617C /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CEF05BB0EAEF424832CF994E /* Pods_HelloRxSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRxSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF41DD023E944AEF4D3BD44D /* Pods-HelloRxSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-HelloRxSwiftTests/Pods-HelloRxSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		D10DEEA78F1745579D67A2B0 /* Pods-HelloRxSwift-HelloRxSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwift-HelloRxSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-HelloRxSwift-HelloRxSwiftUITests/Pods-HelloRxSwift-HelloRxSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 				9FD9B80F2649CBC600B85388 /* LaunchScreen.storyboard */,
 				9FD9B8122649CBC600B85388 /* Info.plist */,
 				9FD9B80A2649CBC500B85388 /* HelloRxSwift.xcdatamodeld */,
+				9FFC0296265EC0D000EA617C /* CombiningOperators.playground */,
 			);
 			path = HelloRxSwift;
 			sourceTree = "<group>";
