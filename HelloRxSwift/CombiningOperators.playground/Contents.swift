@@ -46,3 +46,24 @@ func runMerge() {
 }
 
 // runMerge()
+
+func runCombineLatest() {
+    let left = PublishSubject<Int>()
+    let right = PublishSubject<Int>()
+
+    let observable = Observable.combineLatest(left, right, resultSelector: { lastLeft, lastRight in
+        "\(lastLeft) \(lastRight)"
+    })
+
+    let disposable = observable.subscribe(onNext: { value in
+        print(value)
+    })
+
+    left.onNext(1)
+    left.onNext(2)
+    right.onNext(4)
+    right.onNext(5)
+    left.onNext(3)
+}
+
+// runCombineLatest()
